@@ -1,0 +1,11 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"OpenBoleto\\" : "src"
+		}
+	},
+	"name" : "OpenBoleto/OpenBoleto",
+	"require" : {
+		"php" : ">=7.4"
+	}
+}
