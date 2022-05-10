@@ -4,7 +4,8 @@
 			"OpenBoleto\\" : "src"
 		}
 	},
-	"name" : "OpenBoleto/OpenBoleto",
+	"type" : "library",
+	"name" : "openboleto/openboleto",
 	"require" : {
 		"php" : ">=7.4"
 	}

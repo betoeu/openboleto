@@ -293,6 +293,7 @@ abstract class BoletoAbstract
      */
     protected $imprimeInstrucoesImpressao = true;
     
+    protected $NossoNumero = '';
     
     /**
      * Construtor
@@ -1164,9 +1165,11 @@ abstract class BoletoAbstract
      *
      * @throws Exception
      */
-    public final function setNossoNumero()
+    public function setNossoNumero($nosso_numero)
     {
-        throw new Exception('Não é possível definir o nosso número diretamente. Utilize o método setSequencial.');
+        $this->NossoNumero = $nosso_numero;
+        return $this;
+        //throw new Exception('Não é possível definir o nosso número diretamente. Utilize o método setSequencial.');
     }
 
     /**
@@ -1177,8 +1180,12 @@ abstract class BoletoAbstract
      */
     public function getNossoNumero($incluirFormatacao = true)
     {
+            
+        if (empty($this->NossoNumero)){
         $numero = $this->gerarNossoNumero();
-
+        } else {
+            $numero = $this-> NossoNumero;
+        }
         // TODO: Fazer cache do nosso número para evitar múltiplas chamadas
 
         // Remove a formatação, caso especificado
