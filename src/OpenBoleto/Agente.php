@@ -1,5 +1,5 @@
 <?php
-
+namespace OpenBoleto;
 /*
  * OpenBoleto - Geração de boletos bancários em PHP
  *
@@ -25,7 +25,8 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace OpenBoleto;
+
+
 
 /**
  * Classe de agente usuário do boleto
@@ -78,7 +79,7 @@ class Agente
      * @param string $cidade
      * @param string $uf
      */
-    public function __construct($nome, $documento, $endereco = null, $cep = null, $cidade = null, $uf = null)
+    public function __construct($nome, $documento, $endereco = null, $cep = null, $cidade = null, $uf = null) 
     {
         $this->setNome($nome);
         $this->setDocumento($documento);
