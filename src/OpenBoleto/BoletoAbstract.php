@@ -1544,6 +1544,8 @@ abstract class BoletoAbstract
      */
     protected static function zeroFill($valor, $digitos)
     {
+        $valor = (string) $valor;
+
         // TODO: Retirar isso daqui, e criar um método para validar os dados
         if (strlen($valor) > $digitos) {
             throw new Exception("O valor {$valor} possui mais de {$digitos} dígitos!");

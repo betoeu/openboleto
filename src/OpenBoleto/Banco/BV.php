@@ -67,6 +67,12 @@ class BV extends BoletoAbstract
     protected $carteiras = array('110');
 
     /**
+     * Convênio utilizado pelo Sacado
+     * @var integer
+     */
+    protected $convenio;
+
+    /**
      * Nome do arquivo de template a ser usado
      *
      * A Caixa obriga-nos a usar campos não presentes no projeto original, além de alterar cedente
