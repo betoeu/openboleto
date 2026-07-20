@@ -10,3 +10,12 @@ desktop.ini
 build
 nbproject/
 .idea
+.vscode/
+
+# Dependencias do Composer
+/vendor/
+composer.lock
+
+# Ferramentas locais
+.claude-flow/
+.claude/
